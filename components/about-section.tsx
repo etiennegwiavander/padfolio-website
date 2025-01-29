@@ -10,7 +10,7 @@ export function AboutSection() {
             <Image src={robot} alt="Workspace" fill className="object-cover" />
           </div>
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-teal-600">ABOUT ME</h2>
+            <h2 className="text-2xl font-bold text-teal-600">About Me 📃</h2>
             <h3 className="text-3xl font-bold">
               Front-end Developer
               <br />

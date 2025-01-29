@@ -13,7 +13,7 @@ export function TechStack() {
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 className="text-lg font-medium mb-6">Tech Stack</h3>
+        <h3 className="text-2xl font-bold mb-12  text-teal-600">Tech Stack 👨🏾‍💻</h3>
         <div className="flex flex-wrap gap-4">
           {technologies.map((tech) => (
             <div key={tech.name} className={`${tech.color} text-white px-4 py-2 rounded-md`}>

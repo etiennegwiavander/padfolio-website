@@ -35,7 +35,14 @@ export function Navbar() {
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-semibold">
+          <Link href="/" className="text-xl font-bold"
+            onClick={(e) => {
+            e.preventDefault()
+            document.querySelector("#home")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }}
+          >
           ET!eNNE
           </Link>
 
@@ -45,7 +52,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-gray-600 font-semibold hover:text-teal-600 transition-colors"
                 onClick={(e) => {
                   e.preventDefault()
                   document.querySelector(link.href)?.scrollIntoView({
@@ -82,7 +89,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xl text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-xl text-gray-600 hover:text-teal-500 transition-colors font-semibold"
                 onClick={(e) => {
                   e.preventDefault()
                   document.querySelector(link.href)?.scrollIntoView({
