@@ -4,6 +4,9 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+import { sendEmail } from "@/app/actions/send-email"
+import { Loader2 } from "lucide-react"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -11,11 +14,39 @@ export function ContactSection() {
     email: "",
     message: "",
   })
+  const [isLoading, setIsLoading] = useState(false)
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [status, setStatus] = useState<{
+    success: boolean
+    message: string
+  } | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+    setIsLoading(true)
+
+    try {
+      const result = await sendEmail(formData)
+      setStatus(result)
+      setDialogOpen(true)
+
+      if (result.success) {
+        // Reset form on success
+        setFormData({
+          fullName: "",
+          email: "",
+          message: "",
+        })
+      }
+    } catch (error) {
+      setStatus({
+        success: false,
+        message: "An unexpected error occurred. Please try again.",
+      })
+      setDialogOpen(true)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -41,7 +72,7 @@ export function ContactSection() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            // className="grayscale"
+            className="grayscale"
           ></iframe>
         </div>
 
@@ -86,14 +117,32 @@ export function ContactSection() {
             <div className="flex justify-end">
               <Button
                 type="submit"
-                className="bg-teal-700 hover:bg-teal-600 text-white px-6 py-2 rounded-md transition-colors"
+                disabled={isLoading}
+                className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-md transition-colors"
               >
-                Send Message
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
               </Button>
             </div>
           </form>
         </div>
       </div>
+
+      {/* Status Dialog */}
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{status?.success ? "Success!" : "Error"}</DialogTitle>
+            <DialogDescription>{status?.message}</DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }
