@@ -23,7 +23,7 @@ export function HeroSection() {
     document.body.removeChild(link)
   }
   return (
-    <section id="home" className="pt-24 pb-10 md:pt-32 md:pb-24">
+    <section id="home" className="pt-24 pb-10 md:pt-32 md:pb-22">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex-1 space-y-6 text-center md:text-start">
@@ -31,10 +31,10 @@ export function HeroSection() {
             Hello there <span className="inline-block animate-wave">👋</span>
             </h1>
             <p className="text-gray-600 max-w-xl">
-            I am ETIENNE GWIAVANDER LAKIEBUKEH a software develper with 4+ years industry experience.
+            I am ETIENNE GWIAVANDER LAKIEBUKEH a Frontend developer with 4+ years of Experience building enterprise-level applications, Support Engineer with 2 years of professional experience and an aspiring cyber security engineer with a deep passion for learning new things.
             </p>
             <div className="flex space-x-4">
-              <Link href="linkedin.com/in/etienne-gwiavander-lakiebukeh" target="_blank" className="hover:opacity-80">
+              <Link href="https://www.linkedin.com/in/etienne-gwiavander-lakiebukeh" target="_blank" className="hover:opacity-80">
                 <Linkedin size={24} />
               </Link>
               <Link href="https://github.com/etiennegwiavander" target="_blank" className="hover:opacity-80">
