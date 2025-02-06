@@ -67,40 +67,42 @@ export default function TechStack() {
   }
 
   return (
-  <main className="flex flex-col items-center justify-center sm:p-4">
-    <div className="w-full max-w-4xl">
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  
     <h2 className="text-2xl font-bold mb-2">My Tech Stack</h2>
-      <div
-        ref={scrollRef}
-        className="flex overflow-x-auto space-x-6 py-6 px-4 scrollbar-hide tech-stack-container"
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleMouseUp}
-        onTouchMove={handleTouchMove}
-      >
+    <main className="flex flex-col items-center justify-center sm:p-4">
+      <div className="w-full max-w-4xl">
       
-        {techStack.map((tech) => (
-          <div key={tech.name} className="flex-shrink-0 w-28 text-center transition-transform hover:scale-105">
-            <div className="bg-white rounded-lg shadow-md p-4 mb-2 h-28 flex items-center justify-center">
-              <Image
-                src={tech.logo || "/placeholder.svg"}
-                alt={`${tech.name} logo`}
-                width={64}
-                height={64}
-                className="mx-auto"
-              />
-            </div>
-            <p className="text-sm font-medium truncate">{tech.name}</p>
-          </div>
-        ))}
-      </div>
-
-    </div>
-  </main>
+        <div
+          ref={scrollRef}
+          className="flex overflow-x-auto space-x-6 py-6 px-4 scrollbar-hide tech-stack-container"
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleMouseUp}
+          onTouchMove={handleTouchMove}
+        >
         
+          {techStack.map((tech) => (
+            <div key={tech.name} className="flex-shrink-0 w-28 text-center transition-transform hover:scale-105">
+              <div className="bg-white rounded-lg shadow-md p-4 mb-2 h-28 flex items-center justify-center">
+                <Image
+                  src={tech.logo || "/placeholder.svg"}
+                  alt={`${tech.name} logo`}
+                  width={64}
+                  height={64}
+                  className="mx-auto"
+                />
+              </div>
+              <p className="text-sm font-medium truncate">{tech.name}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </main>
+  </section>      
   )
 }
 
