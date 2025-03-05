@@ -67,7 +67,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-16  bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-8  text-teal-600">Location 🏢</h2>
+        <h2 className="text-3xl font-bold mb-8 text-teal-600">Location 🏢</h2>
 
         {/* Google Maps */}
         <div className="w-full h-[300px] mb-8 rounded-lg overflow-hidden">
@@ -105,6 +105,7 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border rounded-md"
+                  // className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-3 focus:ring-teal-700 transition-all duration-300"
                   disabled={isLoading}
                 />
               </div>
@@ -124,7 +125,7 @@ export function ContactSection() {
             <div>
               <Textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder="Your Message..."
                 value={formData.message}
                 onChange={handleChange}
                 required

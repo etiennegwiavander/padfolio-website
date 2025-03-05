@@ -66,13 +66,13 @@ export default function TechStack() {
 
   return (
     <div>
-      <h1 className="ml--10 text-3xl font-bold mb-12 text-teal-600 px-4">My Tech Stack</h1>
-      <main className="flex flex-col items-center justify-center p-4 sm:p-8">
+      <h1 className="ml--10 text-2xl font-bold mb-2 text-teal-600 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">My Tech Stack</h1>
+      <main className="flex flex-col items-center justify-center p-4 sm:p-2">
         <div className="w-full max-w-4xl">
           
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto space-x-6 py-6 px-4 scrollbar-hide tech-stack-container"
+            className="flex overflow-x-auto space-x-6 py-2 px-4 scrollbar-hide tech-stack-container"
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
