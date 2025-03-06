@@ -45,7 +45,7 @@ export function ContactSection() {
           message: "",
         })
       }
-    } catch (error) {
+    } catch {
       setStatus({
         success: false,
         message: "An unexpected error occurred. Please try again.",

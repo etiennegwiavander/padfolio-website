@@ -17,7 +17,7 @@ export function AboutSection() {
               based in Bamenda, Cameroon
             </h3>
             <p className="text-gray-900">
-            I have over four years of experience crafting enterprise-level applications. My background also includes two years of professional experience as a Support Engineer, giving me a well-rounded perspective on the software development lifecycle.  Beyond my current roles, I&apos;m an aspiring Cybersecurity Engineer, driven by a deep passion for continuous learning and exploring the ever-evolving landscape of technology.  I&apos;m eager to combine my frontend development skills, support experience, and growing cybersecurity knowledge to create secure and user-friendly digital experiences.
+              I have over four years of experience crafting enterprise-level applications. My background also includes two years of professional experience as a Support Engineer, giving me a well-rounded perspective on the software development lifecycle. Beyond my current roles, I&apos;m an aspiring Cybersecurity Engineer, driven by a deep passion for continuous learning and exploring the ever-evolving landscape of technology. I&apos;m eager to combine my frontend development skills, support experience, and growing cybersecurity knowledge to create secure and user-friendly digital experiences.
             </p>
             <p className="text-gray-900">
               My main stack currently is React/Next.js in combination with Tailwind CSS and TypeScript.
@@ -28,4 +28,3 @@ export function AboutSection() {
     </section>
   )
 }
-
