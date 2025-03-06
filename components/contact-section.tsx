@@ -87,7 +87,7 @@ export function ContactSection() {
         <div className="max-w-2xl mx-auto mb-12">
           <blockquote className="p-4 my-4 border-l-4 border-teal-500 bg-teal-50 rounded-r-lg">
             <p className="italic text-lg text-gray-700 leading-relaxed">
-              "If you want your dreams to happen, you have to make other's dreams happen first"
+            &ldquo;If you want your dreams to happen, you have to make other&apos;s dreams happen first&rdquo;
             </p>
           </blockquote>
         </div>
