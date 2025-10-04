@@ -20,6 +20,14 @@ const projects = [
     demo: "https://demo.com",
   },
   {
+    title: "LinguaFlow - Hyper-Personalized Multilingual Lesson Architect",
+    description: "Meet Lingua Flow - A one-on-one language tutor's companion for creating truly personalized lesson plans and interactive language learning materials that adapt to each student's unique needs and progress. Built from the ground up with Next.js, React.js, Tailwind CSS and Supabase for the backend logic, Lingua Flow offers a sleek and intuitive interface that makes lesson planning a breeze.",
+    image: "/linguaflow.png?height=1500&width=500",
+    tech: ["Next.js","React.js", "Tailwind", "Supabase"],
+    github: "https://github.com/etiennegwiavander/LinguaFlow2",
+    demo: "https://linguaflow.online/",
+  },
+  {
     title: "PurpleTube - A YouTube Clone",
     description: "PurpleTube is a YouTube clone built with React.js and Material UI. It features a clean and intuitive user interface that closely resembles the original YouTube platform.",
     image: "/YouTube_Clone.png?height=1500&width=500",

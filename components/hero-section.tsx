@@ -16,8 +16,8 @@ export function HeroSection() {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a")
-    link.href = "Etienne_Gwiavander_CV.pdf"
-    link.download = "Etienne_Gwiavander_CV.pdf"
+    link.href = "Etienne Gwiavander Lakiebukeh - Resume.pdf"
+    link.download = "Etienne Gwiavander Lakiebukeh - Resume.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -31,7 +31,7 @@ export function HeroSection() {
             Hello there <span className="inline-block animate-wave">👋</span>
             </h1>
             <p className="text-gray-600 max-w-xl">
-            I am ETIENNE GWIAVANDER LAKIEBUKEH a Frontend developer with 4+ years of Experience building enterprise-level applications, Support Engineer with 2 years of professional experience and an aspiring cyber security engineer with a deep passion for learning new things.
+            I am ETIENNE GWIAVANDER LAKIEBUKEH a Frontend developer with 5+ years of Experience building enterprise-level applications, Support Engineer with 2+ years of professional experience. I have a deep passion for using AI to enhance the EdTech sector and learning new things.
             </p>
             <div className="flex space-x-4">
               <Link href="https://www.linkedin.com/in/etienne-gwiavander-lakiebukeh" target="_blank" className="hover:opacity-80">
